@@ -1,13 +1,7 @@
 import React from 'react';
 
-import MainPublic from '../components/MainPublic';
-
 const Home = () => {
-  return (
-    <>
-      <MainPublic />
-    </>
-  );
+  return <>Home</>;
 };
 
 export default Home;
