@@ -1,4 +1,11 @@
-import { Box, Container, Card, CardMedia, Typography } from '@mui/material';
+import {
+  Box,
+  Container,
+  Card,
+  CardMedia,
+  Typography,
+  Paper,
+} from '@mui/material';
 
 const Welcome = () => {
   return (
@@ -6,7 +13,7 @@ const Welcome = () => {
       component='section'
       sx={{
         backgroundSize: 'cover',
-        backgroundImage: `url(${'/assets/RightCam.png'})`,
+        backgroundImage: `url(${'/assets/Background.png'})`,
         height: '100vh',
         // opacity: 0.8,
       }}>
@@ -32,7 +39,7 @@ const Welcome = () => {
             justifyContent: 'space-around',
             alignItems: 'center',
           }}>
-          <Box>
+          <Paper sx={{ backgroundColor: 'rgba(69, 69, 69, 0.5)', padding: 6 }}>
             <Typography
               component='h2'
               fontSize={48}
@@ -47,12 +54,12 @@ const Welcome = () => {
               maxWidth={400}>
               Run as far as you can and test yourself
             </Typography>
-          </Box>
+          </Paper>
           {/* <Card sx={{ boxShadow: '0px 0px 4px 4px rgba(255, 255, 255, 0.25)' }}> */}
           <Card sx={{ boxShadow: 20 }}>
             <CardMedia
               component='img'
-              height='250'
+              height='242'
               image='/assets/Cinematic.png'
               alt='Ingame camera'
             />
