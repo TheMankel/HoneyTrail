@@ -1,6 +1,7 @@
 import { Drawer, Box, IconButton, Typography, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Navigation from '../Navigation/Navigation';
+import Logo from '../Logo/Logo';
 
 const DrawerMenu = ({ openDrawer, handleOpenDrawer }) => {
   return (
@@ -18,9 +19,7 @@ const DrawerMenu = ({ openDrawer, handleOpenDrawer }) => {
             justifyContent: 'space-between',
             gap: 1,
           }}>
-          <Typography variant='h6' component='h2'>
-            Menu
-          </Typography>
+          <Logo sx={{ display: 'flex' }} />
           <IconButton
             color='inherit'
             aria-label='close drawer'
