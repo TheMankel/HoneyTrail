@@ -1,11 +1,4 @@
-import {
-  Box,
-  Container,
-  Card,
-  CardMedia,
-  Typography,
-  Paper,
-} from '@mui/material';
+import { Box, Container, Card, CardMedia, Typography } from '@mui/material';
 
 const Welcome = () => {
   return (
@@ -14,15 +7,23 @@ const Welcome = () => {
       sx={{
         backgroundSize: 'cover',
         backgroundImage: `url(${'/assets/Background.png'})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
         height: '100vh',
         // opacity: 0.8,
       }}>
-      <Container maxWidth='xl' sx={{ height: '100vh' }}>
+      <Container maxWidth='xl'>
         <Box
           display='flex'
           justifyContent='center'
-          padding={8}
-          sx={{ userSelect: 'none', pointerEvents: 'none' }}>
+          sx={{
+            userSelect: 'none',
+            pointerEvents: 'none',
+            padding: {
+              xs: 4,
+              md: 8,
+            },
+          }}>
           <Box
             component='img'
             height={100}
@@ -32,14 +33,13 @@ const Welcome = () => {
         </Box>
         <Box
           sx={{
-            // position: 'absolute',
-            // right: 50,
-            // bottom: 100,
             display: 'flex',
             justifyContent: 'space-around',
             alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: 2,
           }}>
-          <Paper sx={{ backgroundColor: 'rgba(69, 69, 69, 0.5)', padding: 6 }}>
+          <Card sx={{ backgroundColor: 'rgba(22, 35, 21, 0.5)', padding: 6 }}>
             <Typography
               component='h2'
               fontSize={48}
@@ -54,7 +54,7 @@ const Welcome = () => {
               maxWidth={400}>
               Run as far as you can and test yourself
             </Typography>
-          </Paper>
+          </Card>
           {/* <Card sx={{ boxShadow: '0px 0px 4px 4px rgba(255, 255, 255, 0.25)' }}> */}
           <Card sx={{ boxShadow: 20 }}>
             <CardMedia

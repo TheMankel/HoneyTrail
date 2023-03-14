@@ -10,13 +10,10 @@ import DownloadIcon from '@mui/icons-material/Download';
 
 const Download = () => {
   return (
-    <Box component='section' style={{ backgroundColor: '#593a0e' }}>
+    <Box component='section' bgcolor='background.default'>
       <Container maxWidth='xl'>
         <Box
           sx={{
-            // position: 'absolute',
-            // right: 50,
-            // bottom: 100,
             display: 'flex',
             justifyContent: 'space-around',
             alignItems: 'center',
@@ -26,11 +23,11 @@ const Download = () => {
               component='h2'
               fontSize={48}
               fontWeight={700}
-              color='#ff9f10'>
+              color='text.primary'>
               Download our game
             </Typography>
             <Typography
-              color='#ff9f10'
+              color='text.secondary'
               fontSize={24}
               fontWeight={500}
               maxWidth={400}
@@ -40,11 +37,13 @@ const Download = () => {
             <Button
               href='https://drive.google.com/uc?export=download&id=1mJ0WWzRNf5J-lXkR1XTiZhnpCPz3mX9v'
               variant='contained'
-              startIcon={<DownloadIcon />}>
+              startIcon={<DownloadIcon />}
+              sx={{
+                color: 'text.primary',
+              }}>
               Download
             </Button>
           </Box>
-          {/* <Card sx={{ boxShadow: '0px 0px 4px 4px rgba(255, 255, 255, 0.25)' }}> */}
           <Card sx={{ boxShadow: 'none', background: 'transparent' }}>
             <CardMedia
               component='img'

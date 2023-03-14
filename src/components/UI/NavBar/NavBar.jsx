@@ -9,10 +9,11 @@ const Navbar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
-    <AppBar position='sticky' style={{ backgroundColor: '#593a0e' }}>
+    <AppBar position='sticky' style={{ backgroundColor: '#162315' }}>
       <Container maxWidth='xl'>
         <Toolbar
           sx={{
+            color: 'text.primary',
             justifyContent: 'space-between',
           }}>
           <NavMenu handleOpenDrawer={setOpenDrawer} />

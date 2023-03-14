@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Link, List, ListItem } from '@mui/material';
+import { Link, List, ListItem, Typography } from '@mui/material';
 
 const Navigation = (props) => {
   const pagesUrls = [
@@ -20,10 +20,11 @@ const Navigation = (props) => {
           to={page.url || '/'}
           sx={{
             '&:hover': {
-              opacity: 0.75,
+              // opacity: 0.75,
+              color: 'text.secondary',
             },
           }}>
-          {page.name}
+          <Typography>{page.name}</Typography>
         </Link>
       </ListItem>
     );

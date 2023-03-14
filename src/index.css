@@ -1,5 +1,6 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Gluten', cursive, Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -32,5 +33,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #593a0e;
+  background: #677117;
 }
+
+/* 593a0e */

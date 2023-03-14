@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Box, Link } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 
 const FooterNavigation = () => {
   const pagesUrls = [
@@ -19,10 +19,11 @@ const FooterNavigation = () => {
           to={page.url || '/'}
           sx={{
             '&:hover': {
-              opacity: 0.75,
+              // opacity: 0.75,
+              color: 'text.secondary',
             },
           }}>
-          {page.name}
+          <Typography>{page.name}</Typography>
         </Link>
       </Box>
     );

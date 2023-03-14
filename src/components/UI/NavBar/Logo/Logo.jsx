@@ -27,7 +27,8 @@ const Logo = (props) => {
           flex: 1,
           py: 2,
           '&:hover': {
-            opacity: 0.75,
+            // opacity: 0.75,
+            color: 'text.secondary',
           },
         }}>
         HoneyTrail

@@ -24,7 +24,8 @@ const Copyright = (props) => {
           to={author.url || '/'}
           sx={{
             '&:hover': {
-              opacity: 0.75,
+              // opacity: 0.75,
+              color: 'text.secondary',
             },
           }}>
           {author.name}
