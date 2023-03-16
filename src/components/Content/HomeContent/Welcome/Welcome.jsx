@@ -39,22 +39,22 @@ const Welcome = () => {
             flexWrap: 'wrap',
             gap: 2,
           }}>
-          <Card sx={{ backgroundColor: 'rgba(22, 35, 21, 0.5)', padding: 6 }}>
+          <Box bgcolor={'rgba(22, 35, 21, 0.5)'} padding={2} borderRadius={1}>
             <Typography
               component='h2'
               fontSize={48}
               fontWeight={700}
-              color='#ff9f10'>
+              color='text.primary'>
               Endless challenge
             </Typography>
             <Typography
-              color='#ff9f10'
+              color='text.secondary'
               fontSize={24}
               fontWeight={500}
               maxWidth={400}>
               Run as far as you can and test yourself
             </Typography>
-          </Card>
+          </Box>
           {/* <Card sx={{ boxShadow: '0px 0px 4px 4px rgba(255, 255, 255, 0.25)' }}> */}
           <Card sx={{ boxShadow: 20 }}>
             <CardMedia
