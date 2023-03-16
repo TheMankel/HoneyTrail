@@ -1,19 +1,11 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Card,
-  CardMedia,
-  Button,
-} from '@mui/material';
+import { Box, Button } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import ShowCase from '../ShowCase/ShowCase';
 import SectionWrapper from '../SectionWrapper/SectionWrapper';
+import Heading from '../Heading/Heading';
 
 const Download = () => {
   return (
-    // <Box component='section' bgcolor='background.default'>
-    //   <Container maxWidth='xl'>
     <SectionWrapper>
       <ShowCase
         title='Download our game'
@@ -21,15 +13,29 @@ const Download = () => {
         image='/assets/Download.png'
         alt='Laying bear'
         imageStyles={{ boxShadow: 'none', background: 'transparent' }}>
-        <Button
-          href='https://drive.google.com/uc?export=download&id=1mJ0WWzRNf5J-lXkR1XTiZhnpCPz3mX9v'
-          variant='contained'
-          startIcon={<DownloadIcon />}
-          sx={{
-            color: 'text.primary',
-          }}>
-          Download
-        </Button>
+        <Heading
+          title='Download our game'
+          subtitle='You can install our game on Android devices'>
+          <Box
+            display='flex'
+            marginTop={2}
+            sx={{
+              justifyContent: {
+                xs: 'center',
+                md: 'flex-start',
+              },
+            }}>
+            <Button
+              href='https://drive.google.com/uc?export=download&id=1mJ0WWzRNf5J-lXkR1XTiZhnpCPz3mX9v'
+              variant='contained'
+              startIcon={<DownloadIcon />}
+              sx={{
+                color: 'text.primary',
+              }}>
+              Download
+            </Button>
+          </Box>
+        </Heading>
       </ShowCase>
       {/* <Box
           sx={{
@@ -73,8 +79,6 @@ const Download = () => {
               </Card>
             </Box> */}
     </SectionWrapper>
-    //   </Container>
-    // </Box>
   );
 };
 
