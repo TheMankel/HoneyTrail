@@ -1,37 +1,69 @@
 import { Box, Container, Card, CardMedia, Typography } from '@mui/material';
+import ShowCase from '../ShowCase/ShowCase';
+import SectionWrapper from '../SectionWrapper/SectionWrapper';
 
 const Welcome = () => {
   return (
-    <Box
-      component='section'
-      sx={{
+    // <Box
+    //   component='section'
+    //   padding={2}
+    //   sx={{
+    //     backgroundSize: 'cover',
+    //     backgroundImage: `url(${'/assets/Background.png'})`,
+    //     backgroundRepeat: 'no-repeat',
+    //     backgroundPosition: 'center',
+    //     minHeight: '100vh',
+    //     // opacity: 0.8,
+    //   }}>
+    //   <Container maxWidth='xl'>
+    <SectionWrapper
+      wrapperStyles={{
         backgroundSize: 'cover',
         backgroundImage: `url(${'/assets/Background.png'})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        height: '100vh',
+        minHeight: '100vh',
         // opacity: 0.8,
       }}>
-      <Container maxWidth='xl'>
-        <Box
-          display='flex'
-          justifyContent='center'
-          sx={{
-            userSelect: 'none',
-            pointerEvents: 'none',
-            padding: {
-              xs: 4,
-              md: 8,
-            },
-          }}>
-          <Box
-            component='img'
-            height={100}
-            alt='Game title'
-            src='assets/Title.png'
-          />
-        </Box>
-        <Box
+      <Box
+        display='flex'
+        justifyContent='center'
+        sx={{
+          userSelect: 'none',
+          pointerEvents: 'none',
+          padding: {
+            xs: 4,
+            md: 8,
+          },
+        }}>
+        {/* <Box
+          component='img'
+          height={100}
+          alt='Game title'
+          src='assets/Title.png'
+        /> */}
+        <Typography
+          component='h1'
+          fontSize={96}
+          fontWeight={700}
+          color='text.primary'
+          sx={{ textShadow: '#162315 0 0 8px' }}>
+          Honey Trail
+        </Typography>
+      </Box>
+      <ShowCase
+        title='Endless challenge'
+        subtitle='Run as far as you can and test yourself'
+        image='/assets/Cinematic.png'
+        alt='Ingame camera'
+        headingStyles={{
+          backgroundColor: 'rgba(22, 35, 21, 0.5)',
+          padding: 4,
+          borderRadius: 1,
+        }}
+        imageStyles={{ boxShadow: 20 }}
+      />
+      {/* <Box
           sx={{
             display: 'flex',
             justifyContent: 'space-around',
@@ -55,18 +87,18 @@ const Welcome = () => {
               Run as far as you can and test yourself
             </Typography>
           </Box>
-          {/* <Card sx={{ boxShadow: '0px 0px 4px 4px rgba(255, 255, 255, 0.25)' }}> */}
           <Card sx={{ boxShadow: 20 }}>
             <CardMedia
               component='img'
-              height='242'
+              height='250'
               image='/assets/Cinematic.png'
               alt='Ingame camera'
             />
           </Card>
-        </Box>
-      </Container>
-    </Box>
+        </Box> */}
+    </SectionWrapper>
+    //   </Container>
+    // </Box>
   );
 };
 
