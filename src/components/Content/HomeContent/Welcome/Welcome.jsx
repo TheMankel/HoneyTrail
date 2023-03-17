@@ -6,7 +6,7 @@ import Heading from '../Heading/Heading';
 const Welcome = () => {
   return (
     <SectionWrapper
-      wrapperStyles={{
+      sx={{
         backgroundSize: 'cover',
         backgroundImage: `url(${'/assets/Background.png'})`,
         backgroundRepeat: 'no-repeat',

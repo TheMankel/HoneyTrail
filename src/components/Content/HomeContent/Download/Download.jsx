@@ -6,7 +6,7 @@ import Heading from '../Heading/Heading';
 
 const Download = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper sx={{ backgroundColor: 'background.paper' }}>
       <ShowCase
         title='Download our game'
         subtitle='You can install our game on Android devices'
