@@ -16,15 +16,14 @@ const Navigation = ({ pagesUrls = [], ...other }) => {
           component={NavLink}
           color='text.primary'
           to={page.url || '/'}
+          fontSize={'1.25rem'}
           sx={{
             '&:hover': {
               // opacity: 0.75,
               color: 'text.secondary',
             },
           }}>
-          <Typography component='a' variant='h6'>
-            {page.name}
-          </Typography>
+          {page.name}
         </Link>
       </ListItem>
     );
