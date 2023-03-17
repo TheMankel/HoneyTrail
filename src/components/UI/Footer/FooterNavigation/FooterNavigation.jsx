@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { Box, Link, Typography } from '@mui/material';
+import { Box, Link, Typography, ListItem, List } from '@mui/material';
 
 const FooterNavigation = () => {
   const pagesUrls = [
     { name: 'About', url: '/about' },
+    { name: 'Gallery', url: '/gallery' },
     { name: 'Contact', url: '/contact' },
     { name: 'FAQ', url: '/faq' },
     { name: 'Privacy Policy', url: '/privacy-policy' },
@@ -11,7 +12,7 @@ const FooterNavigation = () => {
 
   const linkElements = pagesUrls.map((page, i) => {
     return (
-      <Box component='li' key={i}>
+      <ListItem key={i}>
         <Link
           underline='none'
           component={NavLink}
@@ -25,11 +26,16 @@ const FooterNavigation = () => {
           }}>
           <Typography>{page.name}</Typography>
         </Link>
-      </Box>
+      </ListItem>
     );
   });
 
-  return <Box component='ul'>{linkElements}</Box>;
+  return (
+    <Box display='flex' justifyContent='space-around' flexWrap='wrap'>
+      <List>{linkElements}</List>
+      <List>{linkElements}</List>
+    </Box>
+  );
 };
 
 export default FooterNavigation;

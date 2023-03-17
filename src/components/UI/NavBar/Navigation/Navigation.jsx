@@ -5,8 +5,8 @@ const Navigation = (props) => {
   const pagesUrls = [
     { name: 'Home', url: '/' },
     { name: 'About', url: '/about' },
-    { name: 'Screenshots', url: '/screenshots' },
-    { name: 'FAQ', url: '/faq' },
+    { name: 'Gallery', url: '/gallery' },
+    { name: 'Download', url: '/download' },
     { name: 'Contact', url: '/contact' },
   ];
 
@@ -16,7 +16,7 @@ const Navigation = (props) => {
         <Link
           underline='none'
           component={NavLink}
-          color='inherit'
+          color='text.primary'
           to={page.url || '/'}
           sx={{
             '&:hover': {
