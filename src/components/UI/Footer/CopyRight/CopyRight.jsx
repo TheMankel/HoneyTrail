@@ -9,7 +9,7 @@ const Copyright = (props) => {
 
   return (
     <Typography
-      variant='body2'
+      variant='body1'
       color='text.secondary'
       align='center'
       padding={2}
@@ -25,7 +25,7 @@ const Copyright = (props) => {
           sx={{
             '&:hover': {
               // opacity: 0.75,
-              color: 'text.secondary',
+              color: 'text.primary',
             },
           }}>
           {author.name}
