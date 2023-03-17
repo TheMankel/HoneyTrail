@@ -14,8 +14,9 @@ const Logo = (props) => {
         src='/favicon.png'
         alt='Logo'
         style={{
-          height: '40px',
+          height: '56px',
           padding: '8px',
+          aspectRatio: 1,
         }}
       />
       <Typography
@@ -23,9 +24,12 @@ const Logo = (props) => {
         variant='h5'
         color='inherit'
         align='left'
+        fontSize={28}
+        pt={1.75}
+        pb={1}
         sx={{
           flex: 1,
-          py: 2,
+          // py: 2,
           '&:hover': {
             // opacity: 0.75,
             color: 'text.secondary',
