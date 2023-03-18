@@ -1,9 +1,9 @@
-import { Drawer, Box, IconButton, Typography, Divider } from '@mui/material';
+import { Drawer, Box, IconButton, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../../Navigation/Navigation';
 import Logo from '../Logo/Logo';
 
-const DrawerMenu = ({ openDrawer, handleOpenDrawer }) => {
+const DrawerMenu = ({ openDrawer, handleOpenDrawer, pagesUrls }) => {
   return (
     <Drawer
       anchor='left'
@@ -12,8 +12,8 @@ const DrawerMenu = ({ openDrawer, handleOpenDrawer }) => {
       <Box height={1} textAlign='left'>
         <Box
           padding={1}
+          bgcolor='background.default'
           sx={{
-            bgcolor: '#f5f5f5',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -28,7 +28,7 @@ const DrawerMenu = ({ openDrawer, handleOpenDrawer }) => {
           </IconButton>
         </Box>
         <Divider />
-        <Navigation flexWrap='wrap' color='black' />
+        <Navigation pagesUrls={pagesUrls} buttonType={true} />
       </Box>
     </Drawer>
   );
