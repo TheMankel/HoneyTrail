@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import { Link, List, ListItem, Typography } from '@mui/material';
+import { Link, List, ListItem, ListItemButton } from '@mui/material';
 
-const Navigation = ({ pagesUrls = [], ...other }) => {
+const Navigation = ({ pagesUrls = [], buttonType = false, ...other }) => {
   if (!pagesUrls.length) return null;
 
   const linkElements = pagesUrls.map((page, i) => {
-    return (
+    return !buttonType ? (
       <ListItem
         key={i}
         sx={{
@@ -16,7 +16,7 @@ const Navigation = ({ pagesUrls = [], ...other }) => {
           component={NavLink}
           color='text.primary'
           to={page.url || '/'}
-          fontSize={'1.25rem'}
+          fontSize='1.25rem'
           sx={{
             '&:hover': {
               // opacity: 0.75,
@@ -26,11 +26,34 @@ const Navigation = ({ pagesUrls = [], ...other }) => {
           {page.name}
         </Link>
       </ListItem>
+    ) : (
+      <ListItemButton
+        key={i}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Link
+          underline='none'
+          component={NavLink}
+          color='text.primary'
+          to={page.url || '/'}
+          fontSize='1.25rem'
+          sx={{
+            '&:hover': {
+              // opacity: 0.75,
+              color: 'text.secondary',
+            },
+          }}>
+          {page.name}
+        </Link>
+      </ListItemButton>
     );
   });
 
   return (
-    <List disablePadding sx={{ display: 'flex', ...other.sx }}>
+    <List disablePadding sx={{ ...other.sx }}>
       {linkElements}
     </List>
   );
