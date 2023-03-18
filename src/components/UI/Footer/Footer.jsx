@@ -1,7 +1,6 @@
-import { Box, Container, Divider } from '@mui/material';
+import { Box } from '@mui/material';
 import Navigation from '../Navigation/Navigation';
 import Copyright from './CopyRight/CopyRight';
-import FooterNavigation from './FooterNavigation/FooterNavigation';
 
 const Footer = () => {
   const pagesUrls = [
@@ -14,19 +13,10 @@ const Footer = () => {
   ];
 
   return (
-    // <Box component='footer' sx={{ bgcolor: 'background.default' }}>
     <Box component='footer' mt={2}>
-      {/* <Divider /> */}
-      {/* <Box bgcolor='background.paper' py={1}> */}
-      {/* <Container maxWidth='lg'> */}
-      {/* <FooterNavigation /> */}
-      {/* <Navigation pagesUrls={pagesUrls} />
-      </Container> */}
       <Box component='nav' display='flex' justifyContent='center'>
-        <Navigation pagesUrls={pagesUrls} />
+        <Navigation pagesUrls={pagesUrls} sx={{ display: 'flex' }} />
       </Box>
-      {/* </Box> */}
-      {/* <Divider /> */}
       <Copyright title='Jakub Jankowski, Wojciech Bielawa' />
     </Box>
   );

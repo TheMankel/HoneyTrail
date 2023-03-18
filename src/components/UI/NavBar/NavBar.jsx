@@ -3,7 +3,6 @@ import { Container, AppBar, Toolbar, Box } from '@mui/material';
 import NavMenu from './NavMenu/NavMenu';
 import DrawerMenu from './DrawerMenu/DrawerMenu';
 import Logo from './Logo/Logo';
-// import Navigation from './Navigation/Navigation';
 import Navigation from '../Navigation/Navigation';
 
 const Navbar = () => {
@@ -18,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <AppBar position='sticky' style={{ backgroundColor: '#162315' }}>
+    <AppBar position='sticky' sx={{ backgroundColor: 'background.default' }}>
       <Container maxWidth='xl'>
         <Toolbar
           sx={{
@@ -29,11 +28,11 @@ const Navbar = () => {
           <DrawerMenu
             openDrawer={openDrawer}
             handleOpenDrawer={setOpenDrawer}
+            pagesUrls={pagesUrls}
           />
           <Logo sx={{ display: { xs: 'none', md: 'flex' } }} />
           <Box component='nav' sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Navigation pagesUrls={pagesUrls} />
-            {/* <Navigation  /> */}
+            <Navigation pagesUrls={pagesUrls} sx={{ display: 'flex' }} />
           </Box>
         </Toolbar>
       </Container>
@@ -42,5 +41,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// sx={{ display: { xs: 'none', sm: 'flex' } }}
