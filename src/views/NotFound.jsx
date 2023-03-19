@@ -5,18 +5,15 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
-import { useTheme } from '@mui/material';
 
 const NotFound = () => {
-  const theme = useTheme();
-
   return (
     <>
       <Box
+        bgcolor={'background.paper'}
         height={'100vh'}
         display={'flex'}
         alignItems={'center'}
-        bgcolor={'rgb(28, 44, 26)'}
         padding={'16px 0 '}>
         <Container>
           <Box>
