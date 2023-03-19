@@ -1,6 +1,6 @@
 import { Box, Container } from '@mui/material';
 
-const HomeWrapper = ({ children, ...other }) => {
+const SectionWrapper = ({ children, ...other }) => {
   return (
     <Box
       component='section'
@@ -16,4 +16,4 @@ const HomeWrapper = ({ children, ...other }) => {
   );
 };
 
-export default HomeWrapper;
+export default SectionWrapper;
