@@ -44,7 +44,7 @@ const Heading = ({ title, subtitle, headingStyles, children }) => {
       <Typography
         color='text.secondary'
         fontWeight={500}
-        maxWidth={400}
+        maxWidth={800}
         sx={subtitleStyles}>
         {subtitle}
       </Typography>
