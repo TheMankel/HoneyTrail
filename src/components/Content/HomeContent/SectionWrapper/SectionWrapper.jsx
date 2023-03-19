@@ -1,6 +1,6 @@
 import { Box, Container } from '@mui/material';
 
-const SectionWrapper = ({ children, ...other }) => {
+const SectionWrapper = ({ id, children, ...other }) => {
   return (
     <Box
       component='section'
@@ -9,6 +9,7 @@ const SectionWrapper = ({ children, ...other }) => {
       flexDirection='column'
       justifyContent='center'
       alignItems='center'
+      id={id}
       // bgcolor='background.default'
       sx={{ ...other.sx }}>
       <Container maxWidth='xl'>{children}</Container>
