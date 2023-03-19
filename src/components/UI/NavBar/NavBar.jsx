@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const pagesUrls = [
     { name: 'Home', url: '/' },
-    { name: 'About', url: '/about' },
+    { name: 'About', url: '#about' },
     { name: 'Gallery', url: '/gallery' },
     { name: 'Download', url: '/download' },
     { name: 'Contact', url: '/contact' },
