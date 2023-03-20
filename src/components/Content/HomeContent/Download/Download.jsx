@@ -28,10 +28,7 @@ const Download = () => {
             <Button
               href='https://drive.google.com/uc?export=download&id=1mJ0WWzRNf5J-lXkR1XTiZhnpCPz3mX9v'
               variant='contained'
-              startIcon={<DownloadIcon />}
-              sx={{
-                color: 'text.primary',
-              }}>
+              startIcon={<DownloadIcon />}>
               Download
             </Button>
           </Box>
