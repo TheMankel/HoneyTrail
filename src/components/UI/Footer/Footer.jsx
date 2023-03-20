@@ -15,7 +15,15 @@ const Footer = () => {
   return (
     <Box component='footer' mt={2}>
       <Box component='nav' display='flex' justifyContent='center'>
-        <Navigation pagesUrls={pagesUrls} sx={{ display: 'flex' }} />
+        <Navigation
+          pagesUrls={pagesUrls}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+          }}
+        />
       </Box>
       <Copyright title='Jakub Jankowski, Wojciech Bielawa' />
     </Box>
