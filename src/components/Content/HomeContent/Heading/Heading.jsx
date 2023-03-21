@@ -6,7 +6,7 @@ const Heading = ({ title, subtitle, headingStyles, children }) => {
   const titleStyles = {
     textAlign: {
       xs: 'center',
-      md: 'left',
+      md: 'justify',
     },
     fontSize: {
       xs: 32,
@@ -18,7 +18,7 @@ const Heading = ({ title, subtitle, headingStyles, children }) => {
   const subtitleStyles = {
     textAlign: {
       xs: 'center',
-      md: 'left',
+      md: 'justify',
     },
     margin: {
       xs: '0 auto',
