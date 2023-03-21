@@ -1,12 +1,12 @@
 import { Box, Button } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import ShowCase from '../ShowCase/ShowCase';
-import SectionWrapper from '../SectionWrapper/SectionWrapper';
-import Heading from '../Heading/Heading';
+import SectionWrapper from '../../../UI/SectionWrapper/SectionWrapper';
+import Heading from '../../../UI/Heading/Heading';
 
 const Download = () => {
   return (
-    <SectionWrapper sx={{ backgroundColor: 'background.paper' }}>
+    <SectionWrapper id='download' sx={{ backgroundColor: 'background.paper' }}>
       <ShowCase
         title='Download our game'
         subtitle='You can install our game on Android devices'

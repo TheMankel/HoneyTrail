@@ -1,11 +1,12 @@
 import { Typography } from '@mui/material';
 import ShowCase from '../ShowCase/ShowCase';
-import SectionWrapper from '../SectionWrapper/SectionWrapper';
-import Heading from '../Heading/Heading';
+import SectionWrapper from '../../../UI/SectionWrapper/SectionWrapper';
+import Heading from '../../../UI/Heading/Heading';
 
 const Welcome = () => {
   return (
     <SectionWrapper
+      id='welcome'
       sx={{
         backgroundSize: 'cover',
         backgroundImage: `url(${'/assets/Background.png'})`,
