@@ -5,12 +5,14 @@ import NavBar from '../UI/NavBar/NavBar';
 
 const Content = () => {
   return (
-    <main>
+    <>
       <NavBar />
-      <CssBaseline />
-      <Outlet />
+      <main>
+        <CssBaseline />
+        <Outlet />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 

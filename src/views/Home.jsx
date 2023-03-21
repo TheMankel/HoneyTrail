@@ -2,11 +2,7 @@ import React from 'react';
 import HomeContent from '../components/Content/HomeContent/HomeContent';
 
 const Home = () => {
-  return (
-    <>
-      <HomeContent />
-    </>
-  );
+  return <HomeContent />;
 };
 
 export default Home;
