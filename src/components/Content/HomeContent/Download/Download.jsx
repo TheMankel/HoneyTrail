@@ -26,7 +26,8 @@ const Download = () => {
               },
             }}>
             <Button
-              href='https://drive.google.com/uc?export=download&id=1mJ0WWzRNf5J-lXkR1XTiZhnpCPz3mX9v'
+              // href='https://drive.google.com/uc?export=download&id=1mJ0WWzRNf5J-lXkR1XTiZhnpCPz3mX9v'
+              href='https://store7.gofile.io/download/af4d8be5-141a-4e64-aac2-cb89ac5de236/HoneyTrail_GTI_Jankowski_Bielawa.apk'
               variant='contained'
               startIcon={<DownloadIcon />}>
               Download
