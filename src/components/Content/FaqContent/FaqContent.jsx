@@ -8,26 +8,17 @@ import FaqSection from './FaqSection/FaqSection';
 const FaqContent = () => {
   const theme = useTheme();
   return (
-    <Box>
+    <Box bgcolor='background.olive' p={4}>
       <Container>
-        <Box
-          boxShadow={4}
-          borderRadius={2}
-          my={5}
-          bgcolor={theme.palette.background.olive}>
+        <Box boxShadow={4} borderRadius={2} bgcolor='background.default' pb={1}>
           <Box bgcolor={theme.palette.primary.main} borderRadius={2}>
             <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                py: 2,
-              }}>
-              <Typography
-                variant={'h3'}
-                gutterBottom
-                color='white'
-                fontWeight={700}>
+              display='flex'
+              justifyContent='center'
+              alignItems='center'
+              textAlign='center'
+              pt={4}>
+              <Typography variant={'h3'} gutterBottom fontWeight={700}>
                 Frequently asked questions
               </Typography>
             </Box>
@@ -41,16 +32,12 @@ const FaqContent = () => {
               width={'100%'}
               marginBottom={-1.5}>
               <path
-                fill={theme.palette.background.olive}
+                fill={theme.palette.background.default}
                 d='M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z'></path>
             </Box>
           </Box>
           <Container position={'relative'} top={0}>
-            <Box
-              mt={1}
-              container
-              spacing={4}
-              flexDirection={{ xs: 'column-reverse', md: 'row' }}>
+            <Box flexDirection={{ xs: 'column-reverse', md: 'row' }}>
               <FaqSection />
             </Box>
           </Container>
