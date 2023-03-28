@@ -1,9 +1,16 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { CssBaseline, Box } from '@mui/material';
 import Footer from '../UI/Footer/Footer';
 import NavBar from '../UI/NavBar/NavBar';
 
 const Content = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <>
       <NavBar />
