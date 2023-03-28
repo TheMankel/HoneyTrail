@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Slide } from '@mui/material';
+import { Box, Card, CardMedia, Fade } from '@mui/material';
 
 const ShowCase = ({ image, alt, imageStyles, children }) => {
   return (
@@ -14,7 +14,7 @@ const ShowCase = ({ image, alt, imageStyles, children }) => {
         },
       }}>
       {children}
-      <Slide in={true} timeout={3000}>
+      <Fade in={true} timeout={1500}>
         <Card sx={imageStyles}>
           <CardMedia
             component='img'
@@ -29,7 +29,7 @@ const ShowCase = ({ image, alt, imageStyles, children }) => {
             }}
           />
         </Card>
-      </Slide>
+      </Fade>
     </Box>
   );
 };
