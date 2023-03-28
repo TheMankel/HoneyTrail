@@ -3,6 +3,12 @@ import { HashLink } from 'react-router-hash-link';
 import { Link, List, ListItem, ListItemButton } from '@mui/material';
 
 const Navigation = ({ pagesUrls = [], buttonType = false, ...other }) => {
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -64;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+  };
+
   if (!pagesUrls.length) return null;
 
   const linkElements = pagesUrls.map((page, i) => {
@@ -13,6 +19,7 @@ const Navigation = ({ pagesUrls = [], buttonType = false, ...other }) => {
             component={HashLink}
             smooth
             to={page.url}
+            scroll={(el) => scrollWithOffset(el)}
             underline='none'
             color='text.primary'
             fontSize='1.25rem'
