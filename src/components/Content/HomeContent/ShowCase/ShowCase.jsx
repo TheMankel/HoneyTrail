@@ -19,6 +19,7 @@ const ShowCase = ({ image, alt, imageStyles, children }) => {
           component='img'
           image={image}
           alt={alt}
+          loading='lazy'
           sx={{
             height: {
               xs: 175,

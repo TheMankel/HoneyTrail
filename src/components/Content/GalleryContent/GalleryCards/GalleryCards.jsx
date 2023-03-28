@@ -10,42 +10,40 @@ import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/material/styles';
 
 const GalleryCards = () => {
-  const theme = useTheme();
-
   const cards = [
     {
       id: 1,
-      path: 'assets/Gallery/ForestView.png',
+      path: 'assets/Gallery/ForestView.jpg',
       heading: 'The Forest',
       content: 'Bear running through the forest',
     },
     {
       id: 2,
-      path: 'assets/Gallery/BearRun.png',
+      path: 'assets/Gallery/BearRun.jpg',
       heading: 'Gameplay',
       content: 'Third person view of the bear',
     },
     {
       id: 3,
-      path: 'assets/Gallery/TopView.png',
+      path: 'assets/Gallery/TopView.jpg',
       heading: 'From the sky',
       content: 'Overall look at the generated map',
     },
     {
       id: 4,
-      path: 'assets/Gallery/BearJump.png',
+      path: 'assets/Gallery/BearJump.jpg',
       heading: 'Jumping Bear',
       content: 'User interface and ability to jump',
     },
     {
       id: 5,
-      path: 'assets/Gallery/FrontView.png',
+      path: 'assets/Gallery/FrontView.jpg',
       heading: 'Shadow run',
       content: 'The darker part of the map',
     },
     {
       id: 6,
-      path: 'assets/Gallery/GameOver.png',
+      path: 'assets/Gallery/GameOver.jpg',
       heading: 'Game Over',
       content: 'End of the game',
     },
@@ -61,6 +59,7 @@ const GalleryCards = () => {
                 component='img'
                 image={card.path}
                 alt='Gallery image'
+                loading='lazy'
                 sx={{
                   height: {
                     sm: '60%',

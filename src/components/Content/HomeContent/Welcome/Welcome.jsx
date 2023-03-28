@@ -9,11 +9,10 @@ const Welcome = () => {
       id='welcome'
       sx={{
         backgroundSize: 'cover',
-        backgroundImage: `url(${'/assets/Background.png'})`,
+        backgroundImage: `url(${'/assets/Background.jpg'})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         minHeight: '100vh',
-        // opacity: 0.8,
       }}>
       <Typography
         component='h1'
@@ -33,7 +32,7 @@ const Welcome = () => {
         Honey Trail
       </Typography>
       <ShowCase
-        image='/assets/Cinematic.png'
+        image='/assets/Welcome.jpg'
         alt='Ingame camera'
         imageStyles={{ boxShadow: 20 }}>
         <Heading

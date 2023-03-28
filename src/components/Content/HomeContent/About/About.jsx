@@ -43,7 +43,7 @@ const About = () => {
         About
       </Typography>
       <ShowCase
-        image='/assets/TreeCinematic.png'
+        image='/assets/About.jpg'
         alt='View from the game.'
         imageStyles={{ boxShadow: 20 }}
       />
