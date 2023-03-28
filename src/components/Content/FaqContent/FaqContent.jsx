@@ -8,10 +8,10 @@ import FaqSection from './FaqSection/FaqSection';
 const FaqContent = () => {
   const theme = useTheme();
   return (
-    <Box bgcolor='background.olive' p={4}>
+    <Box p={4}>
       <Container>
-        <Box boxShadow={4} borderRadius={2} bgcolor='background.default' pb={1}>
-          <Box bgcolor={theme.palette.primary.main} borderRadius={2}>
+        <Box boxShadow={4} borderRadius={2} bgcolor='background.paper' pb={1}>
+          <Box bgcolor='primary.main' borderRadius={2}>
             <Box
               display='flex'
               justifyContent='center'
@@ -32,7 +32,7 @@ const FaqContent = () => {
               width={'100%'}
               marginBottom={-1.5}>
               <path
-                fill={theme.palette.background.default}
+                fill={theme.palette.background.paper}
                 d='M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z'></path>
             </Box>
           </Box>

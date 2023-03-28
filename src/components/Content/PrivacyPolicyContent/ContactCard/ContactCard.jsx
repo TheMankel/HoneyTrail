@@ -14,6 +14,7 @@ const ContactCard = () => {
     <Box
       component={Card}
       boxShadow={0}
+      bgcolor='background.default'
       border={{
         xs: 0,
         md: `1px solid ${theme.palette.divider}`,

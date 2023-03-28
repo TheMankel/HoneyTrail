@@ -125,7 +125,7 @@ const ContactForm = () => {
               mx='auto'
               variant='contained'
               color='primary'
-              size='medium'
+              size='large'
               fullWidth
               type='submit'
               sx={{ height: 54, textTransform: 'none' }}>

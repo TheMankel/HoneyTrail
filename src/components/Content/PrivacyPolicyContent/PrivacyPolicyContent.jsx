@@ -10,23 +10,20 @@ import PrivacySection from './PrivacySection/PrivacySection';
 const PrivacyPolicyContent = () => {
   const theme = useTheme();
   return (
-    <Box>
+    <Box p={4}>
       <Container>
-        <Box
-          boxShadow={4}
-          borderRadius={2}
-          my={5}
-          bgcolor={theme.palette.background.olive}>
-          <Box bgcolor={theme.palette.primary.main} borderRadius={2}>
-            <Container sx={{ py: 2 }}>
-              <Typography
-                variant={'h3'}
-                gutterBottom
-                color='white'
-                fontWeight={700}>
+        <Box boxShadow={4} borderRadius={2} bgcolor='background.paper'>
+          <Box bgcolor='primary.main' borderRadius={2}>
+            <Box
+              display='flex'
+              justifyContent='center'
+              alignItems='center'
+              textAlign='center'
+              pt={4}>
+              <Typography variant={'h3'} gutterBottom fontWeight={700}>
                 Privacy Policy
               </Typography>
-            </Container>
+            </Box>
             <Box
               component={'svg'}
               preserveAspectRatio='none'
@@ -37,7 +34,7 @@ const PrivacyPolicyContent = () => {
               width={'100%'}
               marginBottom={-1.5}>
               <path
-                fill={theme.palette.background.olive}
+                fill={theme.palette.background.paper}
                 d='M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z'></path>
             </Box>
           </Box>
