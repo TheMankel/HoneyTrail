@@ -8,13 +8,7 @@ import Container from '@mui/material/Container';
 
 const NotFoundContent = () => {
   return (
-    <Box
-      bgcolor={'background.paper'}
-      height={'calc(100vh - 64px - 102px - 16px)'}
-      display={'flex'}
-      alignItems={'center'}
-      // padding={'16px 0 '}
-    >
+    <Box>
       <Container>
         <Box>
           <Typography
