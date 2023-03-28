@@ -17,7 +17,7 @@ const DrawerMenu = ({ openDrawer, handleOpenDrawer, pagesUrls }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: 1,
+            gap: 4,
           }}>
           <Logo sx={{ display: 'flex' }} />
           <IconButton
