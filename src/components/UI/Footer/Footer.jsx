@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Divider } from '@mui/material';
 import Navigation from '../Navigation/Navigation';
 import Copyright from './CopyRight/CopyRight';
 
@@ -13,7 +13,7 @@ const Footer = () => {
   ];
 
   return (
-    <Box component='footer' mt={2}>
+    <Box component='footer' py={2}>
       <Box component='nav' display='flex' justifyContent='center'>
         <Navigation
           pagesUrls={pagesUrls}

@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, Box } from '@mui/material';
 import Footer from '../UI/Footer/Footer';
 import NavBar from '../UI/NavBar/NavBar';
 
@@ -7,10 +7,18 @@ const Content = () => {
   return (
     <>
       <NavBar />
-      <main>
+      <Box
+        component='main'
+        bgcolor='background.olive'
+        minHeight='calc(100vh - 64px - 134px)'
+        width='100%'
+        display='flex'
+        flexDirection='column'
+        justifyContent='center'
+        alignItems='center'>
         <CssBaseline />
         <Outlet />
-      </main>
+      </Box>
       <Footer />
     </>
   );

@@ -5,6 +5,7 @@ const SectionWrapper = ({ id, children, ...other }) => {
     <Box
       component='section'
       padding={2}
+      width='100%'
       display='flex'
       flexDirection='column'
       justifyContent='center'
