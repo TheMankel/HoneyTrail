@@ -62,7 +62,12 @@ const GalleryCards = () => {
                   component='img'
                   image={card.path}
                   alt='random'
-                  sx={{ height: '70%' }}
+                  sx={{
+                    height: '70%',
+                    [theme.breakpoints.down('sm')]: {
+                      height: '60%',
+                    },
+                  }}
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
