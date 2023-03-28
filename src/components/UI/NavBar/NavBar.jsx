@@ -9,10 +9,10 @@ const Navbar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const pagesUrls = [
-    { name: 'Home', url: '/' },
-    { name: 'About', url: '#about' },
+    { name: 'Home', url: '/#welcome' },
+    { name: 'About', url: '/#about' },
     { name: 'Gallery', url: '/gallery' },
-    { name: 'Download', url: '/download' },
+    { name: 'Download', url: '/#download' },
     { name: 'Contact', url: '/contact' },
   ];
 
