@@ -1,13 +1,12 @@
 import React from 'react';
 
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
-import { useTheme } from '@mui/material/styles';
+import { Fade } from '@mui/material';
 
 const GalleryCards = () => {
   const cards = [
@@ -50,34 +49,36 @@ const GalleryCards = () => {
   ];
 
   return (
-    <Box py={2}>
-      <Grid container spacing={4} sx={{ height: '100%' }}>
-        {cards.map((card) => (
-          <Grid item key={card.id} xs={12} sm={6} md={4}>
-            <Card sx={{ height: '100%' }}>
-              <CardMedia
-                component='img'
-                image={card.path}
-                alt='Gallery image'
-                loading='lazy'
-                sx={{
-                  height: {
-                    sm: '60%',
-                    lg: '70%',
-                  },
-                }}
-              />
-              <CardContent>
-                <Typography gutterBottom variant='h5' component='h2'>
-                  {card.heading}
-                </Typography>
-                <Typography>{card.content}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+    <Fade in={true} timeout={1500}>
+      <Box py={2}>
+        <Grid container spacing={4} sx={{ height: '100%' }}>
+          {cards.map((card) => (
+            <Grid item key={card.id} xs={12} sm={6} md={4}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component='img'
+                  image={card.path}
+                  alt='Gallery image'
+                  loading='lazy'
+                  sx={{
+                    height: {
+                      sm: '60%',
+                      lg: '70%',
+                    },
+                  }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant='h5' component='h2'>
+                    {card.heading}
+                  </Typography>
+                  <Typography>{card.content}</Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </Fade>
   );
 };
 
