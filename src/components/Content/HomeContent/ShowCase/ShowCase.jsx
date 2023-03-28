@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia } from '@mui/material';
+import { Box, Card, CardMedia, Slide } from '@mui/material';
 
 const ShowCase = ({ image, alt, imageStyles, children }) => {
   return (
@@ -14,20 +14,22 @@ const ShowCase = ({ image, alt, imageStyles, children }) => {
         },
       }}>
       {children}
-      <Card sx={imageStyles}>
-        <CardMedia
-          component='img'
-          image={image}
-          alt={alt}
-          loading='lazy'
-          sx={{
-            height: {
-              xs: 175,
-              md: 250,
-            },
-          }}
-        />
-      </Card>
+      <Slide in={true} timeout={3000}>
+        <Card sx={imageStyles}>
+          <CardMedia
+            component='img'
+            image={image}
+            alt={alt}
+            loading='lazy'
+            sx={{
+              height: {
+                xs: 175,
+                md: 250,
+              },
+            }}
+          />
+        </Card>
+      </Slide>
     </Box>
   );
 };
