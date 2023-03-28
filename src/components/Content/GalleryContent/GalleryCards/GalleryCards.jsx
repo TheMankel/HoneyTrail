@@ -52,34 +52,32 @@ const GalleryCards = () => {
   ];
 
   return (
-    <Box bgcolor={theme.palette.background.olive}>
-      <Container sx={{ py: 8 }} maxWidth='lg'>
-        <Grid container spacing={4} sx={{ height: '100%' }}>
-          {cards.map((card) => (
-            <Grid item key={card.id} xs={12} sm={6} md={4}>
-              <Card sx={{ height: '100%' }}>
-                <CardMedia
-                  component='img'
-                  image={card.path}
-                  alt='random'
-                  sx={{
-                    height: '70%',
-                    [theme.breakpoints.down('sm')]: {
-                      height: '60%',
-                    },
-                  }}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant='h5' component='h2'>
-                    {card.heading}
-                  </Typography>
-                  <Typography>{card.content}</Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+    <Box py={2}>
+      <Grid container spacing={4} sx={{ height: '100%' }}>
+        {cards.map((card) => (
+          <Grid item key={card.id} xs={12} sm={6} md={4}>
+            <Card sx={{ height: '100%' }}>
+              <CardMedia
+                component='img'
+                image={card.path}
+                alt='Gallery image'
+                sx={{
+                  height: {
+                    sm: '60%',
+                    lg: '70%',
+                  },
+                }}
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='h2'>
+                  {card.heading}
+                </Typography>
+                <Typography>{card.content}</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };
