@@ -21,6 +21,7 @@ const Navbar = () => {
       <Container maxWidth='xl'>
         <Toolbar
           sx={{
+            minHeight: 64,
             color: 'text.primary',
             justifyContent: 'space-between',
           }}>
