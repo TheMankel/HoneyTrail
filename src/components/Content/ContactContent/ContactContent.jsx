@@ -6,7 +6,15 @@ const ContactContent = () => {
   return (
     <Box bgcolor='background.olive'>
       <Container>
-        <Grid container spacing={8} p={4}>
+        <Grid
+          container
+          spacing={8}
+          sx={{
+            py: {
+              xs: 2,
+              md: 4,
+            },
+          }}>
           <Grid item container justifyContent={'center'} xs={12} md={6}>
             <ContactAside />
           </Grid>

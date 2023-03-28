@@ -19,7 +19,10 @@ const DrawerMenu = ({ openDrawer, handleOpenDrawer, pagesUrls }) => {
             justifyContent: 'space-between',
             gap: 4,
           }}>
-          <Logo sx={{ display: 'flex' }} />
+          <Logo
+            onClick={() => handleOpenDrawer(false)}
+            sx={{ display: 'flex' }}
+          />
           <IconButton
             color='inherit'
             aria-label='close drawer'

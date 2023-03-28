@@ -8,7 +8,13 @@ import FaqSection from './FaqSection/FaqSection';
 const FaqContent = () => {
   const theme = useTheme();
   return (
-    <Box p={4}>
+    <Box
+      sx={{
+        py: {
+          xs: 2,
+          md: 4,
+        },
+      }}>
       <Container>
         <Box boxShadow={4} borderRadius={2} bgcolor='background.paper' pb={1}>
           <Box bgcolor='primary.main' borderRadius={2}>

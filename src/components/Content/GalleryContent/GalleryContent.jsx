@@ -1,11 +1,16 @@
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import { Box, Container } from '@mui/material';
 import GalleryCards from './GalleryCards/GalleryCards';
 import Heading from '../../UI/Heading/Heading';
 
 const GalleryContent = () => {
   return (
-    <Box p={4}>
+    <Box
+      sx={{
+        py: {
+          xs: 2,
+          md: 4,
+        },
+      }}>
       <Container>
         <Box py={2} borderRadius={1} bgcolor='background.paper'>
           <Heading

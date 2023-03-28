@@ -10,7 +10,13 @@ import PrivacySection from './PrivacySection/PrivacySection';
 const PrivacyPolicyContent = () => {
   const theme = useTheme();
   return (
-    <Box p={4}>
+    <Box
+      sx={{
+        py: {
+          xs: 2,
+          md: 4,
+        },
+      }}>
       <Container>
         <Box boxShadow={4} borderRadius={2} bgcolor='background.paper'>
           <Box bgcolor='primary.main' borderRadius={2}>

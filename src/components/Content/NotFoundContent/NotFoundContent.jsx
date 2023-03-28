@@ -8,7 +8,13 @@ import Container from '@mui/material/Container';
 
 const NotFoundContent = () => {
   return (
-    <Box>
+    <Box
+      sx={{
+        py: {
+          xs: 2,
+          md: 4,
+        },
+      }}>
       <Container>
         <Box>
           <Typography
