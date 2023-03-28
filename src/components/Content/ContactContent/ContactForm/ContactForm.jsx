@@ -94,18 +94,6 @@ const ContactForm = () => {
               name='from_name'
             />
           </Grid>
-          {/* <Grid item xs={12} sm={6}>
-            <TextField
-              sx={{ height: 54 }}
-              label='Last name'
-              variant='outlined'
-              color='primary'
-              size='medium'
-              fullWidth
-              id='lastname'
-              name='lastname'
-            />
-          </Grid> */}
           <Grid item xs={12}>
             <TextField
               sx={{ height: 54 }}

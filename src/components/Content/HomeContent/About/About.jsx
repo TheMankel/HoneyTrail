@@ -45,11 +45,10 @@ const About = () => {
       <ShowCase
         image='/assets/TreeCinematic.png'
         alt='View from the game.'
-        imageStyles={{ boxShadow: 20 }}></ShowCase>
+        imageStyles={{ boxShadow: 20 }}
+      />
       <Heading
-        // title='Now available'
         title='Welcome to Honey Trail!'
-        // subtitle='You are playing as a running bear. Run as long as possible, collect Honey and avoid logs and tree stumps! Get the highest score now!'
         subtitle="Do you like honey? Do you like running? If you do, you'll love Honey Trail!"
         headingStyles={{
           display: 'flex',
