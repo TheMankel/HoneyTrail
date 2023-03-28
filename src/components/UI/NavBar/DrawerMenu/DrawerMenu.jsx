@@ -28,7 +28,11 @@ const DrawerMenu = ({ openDrawer, handleOpenDrawer, pagesUrls }) => {
           </IconButton>
         </Box>
         <Divider />
-        <Navigation pagesUrls={pagesUrls} buttonType={true} />
+        <Navigation
+          pagesUrls={pagesUrls}
+          buttonType={true}
+          closeDrawer={() => handleOpenDrawer(false)}
+        />
       </Box>
     </Drawer>
   );

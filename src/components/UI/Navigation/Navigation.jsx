@@ -2,7 +2,12 @@ import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { Link, List, ListItem, ListItemButton } from '@mui/material';
 
-const Navigation = ({ pagesUrls = [], buttonType = false, ...other }) => {
+const Navigation = ({
+  pagesUrls = [],
+  buttonType = false,
+  closeDrawer = () => {},
+  ...other
+}) => {
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = -64;
@@ -49,24 +54,43 @@ const Navigation = ({ pagesUrls = [], buttonType = false, ...other }) => {
     ) : (
       <ListItemButton
         key={i}
+        onClick={closeDrawer}
         sx={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <Link
-          underline='none'
-          component={NavLink}
-          color='text.primary'
-          to={page.url || '/'}
-          fontSize='1.25rem'
-          sx={{
-            '&:hover': {
-              color: 'text.secondary',
-            },
-          }}>
-          {page.name}
-        </Link>
+        {page.url.includes('#') ? (
+          <Link
+            component={HashLink}
+            smooth
+            to={page.url}
+            scroll={(el) => scrollWithOffset(el)}
+            underline='none'
+            color='text.primary'
+            fontSize='1.25rem'
+            sx={{
+              '&:hover': {
+                color: 'text.secondary',
+              },
+            }}>
+            {page.name}
+          </Link>
+        ) : (
+          <Link
+            underline='none'
+            component={NavLink}
+            color='text.primary'
+            to={page.url || '/'}
+            fontSize='1.25rem'
+            sx={{
+              '&:hover': {
+                color: 'text.secondary',
+              },
+            }}>
+            {page.name}
+          </Link>
+        )}
       </ListItemButton>
     );
   });
