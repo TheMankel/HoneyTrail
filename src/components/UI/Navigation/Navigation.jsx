@@ -8,7 +8,7 @@ const Navigation = ({ pagesUrls = [], buttonType = false, ...other }) => {
   const linkElements = pagesUrls.map((page, i) => {
     return !buttonType ? (
       <ListItem key={i} sx={{ width: 'auto' }}>
-        {page.url === '/#about' || '/#download' || '/#welcome' ? (
+        {page.url.includes('#') ? (
           <Link
             component={HashLink}
             smooth
