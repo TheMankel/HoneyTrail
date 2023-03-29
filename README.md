@@ -1,6 +1,6 @@
 # HoneyTrail
 
-The purpose of this site is to showcase a product that we developed together with @HiImWhite as part of an e-marketing course.
+The purpose of this site is to showcase a product that we developed together with [@HiImWhite](https://www.github.com/HiImWhite) as part of an e-marketing course.
 
 ## About product
 
